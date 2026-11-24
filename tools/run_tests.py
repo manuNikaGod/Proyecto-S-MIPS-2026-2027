@@ -15,8 +15,22 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parent.parent
 HERE = ROOT/'tools'
-JAR = os.environ.get('LOGISIM_JAR', '/snap/logisim-evolution-snapcraft/current/jar/logisim-evolution.jar')
-MARS = os.environ.get('MARS_JAR', str(Path.home()/'Apps/mars/Mars4_5.jar'))
+import os
+
+# Rutas a los ejecutables JAR
+os.environ['MARS_JAR'] = r'D:\Escuela\segundo curso CC\AC\Mars4_5.jar'
+os.environ['LOGISIM_JAR'] = r'D:\Escuela\segundo curso CC\app\logisim-evolution-5.0.0-all.jar'
+
+# Variables de conveniencia
+JAR = os.environ['LOGISIM_JAR']
+MARS = os.environ['MARS_JAR']
+
+# (Opcional) Verificación rápida de que los archivos existen
+for nombre, ruta in [('MARS', MARS), ('Logisim', JAR)]:
+    if os.path.isfile(ruta):
+        print(f"[OK] {nombre}: {ruta}")
+    else:
+        print(f"[ERROR] {nombre} no encontrado en: {ruta}")
 JAVA = os.environ.get('JAVA', 'java')
 CICLOS_MAX = 60000  # con 4-5 ciclos por instruccion, el programa mas largo usa unos 8000
 
