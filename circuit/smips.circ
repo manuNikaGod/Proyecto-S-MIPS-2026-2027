@@ -716,6 +716,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="is_R"/>
     </comp>
+    <comp lib="0" loc="(880,920)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="TAKEN"/>
+    </comp>
     <comp lib="0" loc="(890,770)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="is_j"/>
@@ -757,10 +761,6 @@
     <comp lib="0" loc="(900,850)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="is_illegal"/>
-    </comp>
-    <comp lib="0" loc="(900,910)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="TAKEN"/>
     </comp>
     <comp lib="7" loc="(500,40)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
@@ -886,9 +886,12 @@
     <wire from="(840,790)" to="(910,790)"/>
     <wire from="(850,630)" to="(910,630)"/>
     <wire from="(880,550)" to="(910,550)"/>
+    <wire from="(880,920)" to="(890,920)"/>
     <wire from="(890,770)" to="(910,770)"/>
     <wire from="(890,810)" to="(910,810)"/>
     <wire from="(890,890)" to="(910,890)"/>
+    <wire from="(890,910)" to="(890,920)"/>
+    <wire from="(890,910)" to="(910,910)"/>
     <wire from="(90,460)" to="(150,460)"/>
     <wire from="(90,490)" to="(150,490)"/>
     <wire from="(900,490)" to="(900,510)"/>
@@ -898,7 +901,6 @@
     <wire from="(900,690)" to="(910,690)"/>
     <wire from="(900,730)" to="(910,730)"/>
     <wire from="(900,850)" to="(910,850)"/>
-    <wire from="(900,910)" to="(910,910)"/>
     <wire from="(910,460)" to="(910,490)"/>
     <wire from="(910,870)" to="(920,870)"/>
   </circuit>
@@ -2751,12 +2753,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="TAKEN"/>
     </comp>
-    <comp lib="0" loc="(310,390)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="PC_En"/>
-      <a name="type" val="output"/>
-    </comp>
     <comp lib="0" loc="(310,450)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -2779,33 +2775,29 @@
       <a name="facing" val="east"/>
       <a name="label" val="Zero"/>
     </comp>
-    <comp lib="0" loc="(660,270)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Branch"/>
-    </comp>
-    <comp lib="0" loc="(690,170)" name="Tunnel">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(700,210)" name="Tunnel">
       <a name="label" val="TAKEN"/>
     </comp>
     <comp lib="0" loc="(740,300)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="PCWrite"/>
     </comp>
+    <comp lib="0" loc="(800,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="PC_En"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp lib="1" loc="(450,290)" name="NOT Gate"/>
     <comp lib="1" loc="(530,180)" name="AND Gate"/>
     <comp lib="1" loc="(530,270)" name="AND Gate"/>
     <comp lib="1" loc="(640,210)" name="OR Gate"/>
-    <comp lib="1" loc="(740,250)" name="AND Gate"/>
-    <comp lib="1" loc="(850,280)" name="OR Gate"/>
     <wire from="(130,100)" to="(180,100)"/>
     <wire from="(130,170)" to="(180,170)"/>
     <wire from="(130,230)" to="(180,230)"/>
     <wire from="(130,280)" to="(180,280)"/>
     <wire from="(130,330)" to="(180,330)"/>
     <wire from="(280,450)" to="(310,450)"/>
-    <wire from="(300,370)" to="(300,390)"/>
-    <wire from="(300,370)" to="(860,370)"/>
-    <wire from="(300,390)" to="(310,390)"/>
     <wire from="(380,290)" to="(420,290)"/>
     <wire from="(390,250)" to="(480,250)"/>
     <wire from="(440,160)" to="(480,160)"/>
@@ -2817,18 +2809,11 @@
     <wire from="(570,230)" to="(590,230)"/>
     <wire from="(580,180)" to="(580,190)"/>
     <wire from="(580,190)" to="(590,190)"/>
-    <wire from="(640,210)" to="(640,220)"/>
-    <wire from="(640,220)" to="(670,220)"/>
-    <wire from="(660,270)" to="(690,270)"/>
-    <wire from="(670,220)" to="(670,230)"/>
-    <wire from="(670,230)" to="(690,230)"/>
-    <wire from="(690,170)" to="(690,230)"/>
-    <wire from="(740,250)" to="(790,250)"/>
+    <wire from="(640,210)" to="(640,230)"/>
+    <wire from="(640,230)" to="(690,230)"/>
+    <wire from="(690,210)" to="(690,230)"/>
+    <wire from="(690,210)" to="(700,210)"/>
     <wire from="(740,300)" to="(800,300)"/>
-    <wire from="(790,250)" to="(790,260)"/>
-    <wire from="(790,260)" to="(800,260)"/>
-    <wire from="(850,280)" to="(860,280)"/>
-    <wire from="(860,280)" to="(860,370)"/>
   </circuit>
   <circuit name="Control_Unit">
     <a name="appearance" val="logisim_evolution"/>
